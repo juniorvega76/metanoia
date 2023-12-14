@@ -1,0 +1,219 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-top: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-right: 0;
+    font-weight: bold;
+    font-size: large;
+    background-color: #141313;
+    border-bottom: #fff solid 1px;
+    top: 0;
+    position: sticky;
+    box-shadow: 0 5px 20px 0 rgba(20,24,31, .08);
+    z-index: 4;
+}
+
+ul li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+
+}
+a:hover{
+    color: aqua;
+
+}
+
+header {
+    background-color: #141313;
+    color: #fff;
+    text-align: center;
+    padding: 1em 10%;
+    font-size: 2vh;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+}
+
+
+/*
+  *************   PLANES   ***********************
+*/
+
+.section-planes{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px, 1fr)
+    );
+    gap: 16px;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.centrar-contenedor{
+    display: flex;
+    justify-content: center;
+}
+
+.tarjeta-planes{
+    width: 80%;
+    height: auto;
+    border-radius: 24px;
+    background-color: #edf3f2;
+    font-family: 'Inter', sans-serif; 
+}
+
+.tarjeta-planes:hover{
+    cursor: pointer;
+    box-shadow: 0 5px 20px 0 rgba(20,24,31, .08);
+    transition: all .3s;
+    transform: translateY(-7px);
+    box-shadow: 10px 10px 7px rgba(20,24,31, .04);
+    font-family: 'Inter', sans-serif;
+    z-index: 1;
+}
+
+.tarjeta-planes img{
+    border-radius: 8px;
+    width: 70%;
+
+}
+
+.texto-tarjeta{
+    padding: 6px 15px;
+    font-size: 16px;
+}
+
+.btn-ver{
+    padding: 12px;
+    border-radius: 24px;
+    background-color: #fff;
+    font-size: 13pt;
+}
+
+.btn-ver:hover{
+    
+    border: 1px solid greenyellow;
+}
+
+.btn-estilo{
+    margin: 7px 8px 30px 7px;
+}
+
+
+
+/*
+  *************   EQUIPO   ***********************
+*/
+
+.section-equipo{
+    background-color: aliceblue;
+    padding: 28px;
+    
+}
+
+.titulo-equipo {
+    text-align: center;
+    width: 100%;
+    font-size: 15pt;
+}
+
+
+.contenedor-personas {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: 0 auto;
+    
+}
+
+.descripcion-p, .img-persona {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    
+}
+.icono-persona {
+    
+    
+    width: 250px; /* Ajusta el tamaño según tus necesidades */
+    height: 250px; /* Asegura una relación de aspecto cuadrada */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    overflow: hidden; /* Recorta cualquier contenido que sobresalga del área circular */
+    /*
+    max-width: 400px;
+    width: 65%;
+    border-radius: 50%;*/
+
+}
+
+.nombre-persona{
+    font-weight: bold
+}
+
+.descripcion-p {
+    padding-left: 15%;
+}
+
+
+.img-persona{
+    display: flex;
+    align-items: center;
+}
+
+.foto-izq{
+    justify-content: right;
+}
+
+@media (max-width: 800px) {
+    .contenedor-personas {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .descripcion-p, p {
+        order: 2;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    .img-persona{
+        width: 100%;
+        
+    }
+    .foto-izq{
+        justify-content: center;
+    }
+
+    
+}
+
+/* lo contrario al anterior*/
+
+
+
+.section-equipo2{
+    background-color: rgb(255, 255, 255);
+    padding: 28px;
+}
