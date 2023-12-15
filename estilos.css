@@ -5,38 +5,105 @@ body {
     background-color: #ffffff;
 
 }
-
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    padding-top: 20px;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-right: 0;
-    font-weight: bold;
-    font-size: large;
-    background-color: #141313;
-    border-bottom: #fff solid 1px;
-    top: 0;
-    position: sticky;
-    box-shadow: 0 5px 20px 0 rgba(20,24,31, .08);
-    z-index: 4;
-}
-
-ul li{
-    display: inline-block;
-    padding: 0px 20px;
+ol, ul{
+    list-style: none;
 }
 a{
-    color: #ffffff;
     text-decoration: none;
+    color: #fff;
+}
+
+
+/* BARRA DE NAVEGACIÓN O MENÚ HAMBURGUESA*/
+
+.header-papa{
+    position: sticky;
+    top: 0;
+    height: 80px;
+    background-color: #141313;
+    border-bottom: 1px #fff solid;
+}
+
+.navbar {
+    height: 100%;
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
 
 }
-a:hover{
-    color: aqua;
-
+.label-hamburguesa {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
 }
+
+.fa {
+    color: #fff;
+    cursor: pointer;
+    
+    
+}
+
+.menu-hamburguesa {
+    display: none;
+}
+.menu-hamburguesa:checked + .ul-links{
+    height: calc(100vh - 80px);
+    
+}
+
+.link{
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.ul-links {
+    background-color: #333;
+   width: 100%;
+   position: absolute;
+   top: 65px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 0;
+   align-items: center;
+   gap: 2rem;
+   overflow: hidden;
+   transition: all 0.4s;
+}
+
+@media (min-width: 768px) {
+    .label-hamburguesa{
+        display: none;
+    
+    }
+    .ul-links{
+        position: static;
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        gap: 2rem;
+        padding-right: 30px;
+        background-color: transparent;
+    
+    }
+    .link{
+        font-size: 1.2rem;
+        transition: all .3s;
+    }
+    
+    .link:hover{
+        color: aqua;
+    }
+}
+
+
+
 
 header {
     background-color: #141313;
@@ -53,6 +120,11 @@ footer {
     padding: 1em 0;
     width: 100%;
 }
+footer a:hover  {
+    color: aqua;
+}
+
+
 
 
 /*
@@ -210,8 +282,6 @@ footer {
 }
 
 /* lo contrario al anterior*/
-
-
 
 .section-equipo2{
     background-color: rgb(255, 255, 255);
